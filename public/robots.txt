@@ -1,0 +1,8 @@
+# Apex Agency — robots.txt
+# Googlebot e os demais rastreadores seguem a regra abaixo: nenhum bloqueio.
+User-agent: *
+Allow: /
+
+# CSS, JavaScript, imagens e fontes permanecem liberados para renderização.
+# Sitemap canônico ( HTTPS )
+Sitemap: https://apexagency.com.br/sitemap.xml

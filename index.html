@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============================ SEO TÉCNICO ============================ -->
+    <title>Apex Agency | Estratégia, Tecnologia e Marketing Digital</title>
+    <meta name="description" content="A Apex Agency transforma marcas por meio de estratégia, desenvolvimento digital, inteligência artificial e marketing. Construímos experiências e soluções digitais para empresas que querem crescer.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://apexagency.com.br/">
+    <meta name="theme-color" content="#630B1D">
+
+    <!-- Favicon: logo oficial da Apex em múltiplos formatos -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Apex Agency">
+    <meta property="og:title" content="Apex Agency | Estratégia, Tecnologia e Marketing Digital">
+    <meta property="og:description" content="A Apex Agency transforma marcas por meio de estratégia, desenvolvimento digital, inteligência artificial e marketing. Construímos experiências e soluções digitais para empresas que querem crescer.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apexagency.com.br/">
+    <meta property="og:image" content="https://apexagency.com.br/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Apex Agency">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apex Agency | Estratégia, Tecnologia e Marketing Digital">
+    <meta name="twitter:description" content="A Apex Agency transforma marcas por meio de estratégia, desenvolvimento digital, inteligência artificial e marketing. Construímos experiências e soluções digitais para empresas que querem crescer.">
+    <meta name="twitter:image" content="https://apexagency.com.br/og-image.png">
+    <meta name="twitter:image:alt" content="Apex Agency">
+
+    <!-- Google Search Console: cole aqui a meta tag fornecida pelo Google quando verificar a propriedade -->
+    <!-- <meta name="google-site-verification" content="CODIGO_FORNECIDO_PELO_GOOGLE"> -->
+    <!-- Alternativa via DNS: adicione o registro TXT fornecido pelo Google em Cloudflare DNS. -->
+
+    <!-- Dados estruturados (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://apexagency.com.br/#organization",
+        "name": "Apex Agency",
+        "url": "https://apexagency.com.br/",
+        "logo": "https://apexagency.com.br/apex-logo.png",
+        "description": "A Apex Agency transforma marcas por meio de estratégia, desenvolvimento digital, inteligência artificial e marketing. Construímos experiências e soluções digitais para empresas que querem crescer.",
+        "email": "contato@apexagency.com.br"
+    }
+    </script>
+    <!-- sameAs: adicionar quando houver perfis oficiais confirmados da marca. -->
+
+    <!-- Tipografia Editorial: Plus Jakarta Sans, Inter & Geist Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        mono: ['Geist Mono', 'monospace'],
+                    },
+                    colors: {
+                        ink: '#09090B',
+                        muted: '#52525B',
+                        subtle: '#71717A',
+                        surface: '#FAFAFA',
+                        surfaceAlt: '#F4F4F5',
+                        border: '#E4E4E7',
+                        bordeaux: {
+                            DEFAULT: '#630B1D',
+                            dark: '#450613',
+                            deep: '#36040E',
+                            light: '#8A112A',
+                            crimson: '#9E1430',
+                            soft: '#FDF2F4',
+                            border: '#F2D0D7',
+                        }
+                    },
+                    letterSpacing: {
+                        display: '-0.035em',
+                        heading: '-0.025em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FFFFFF;
+            color: #09090B;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background-color: #630B1D;
+            color: #FFFFFF;
+        }
+
+        :where(a, button, input, select):focus-visible {
+            outline: 2px solid #630B1D;
+            outline-offset: 3px;
+        }
+
+        /* Navbar flutuante (cápsula branca) */
+        header {
+            transition: top 280ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        header.is-scrolled {
+            top: 0.5rem;
+        }
+
+        .nav-pill {
+            animation: navFloat 9s ease-in-out infinite;
+            transition: box-shadow 300ms ease;
+        }
+
+        @keyframes navFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        header.is-scrolled .nav-pill {
+            box-shadow: 0 10px 28px rgba(9, 9, 11, 0.08);
+        }
+
+        .nav-link {
+            transition: color 200ms ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: -5px;
+            height: 1px;
+            background: #690C25;
+            transition: right 260ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-link:hover::after {
+            right: 0;
+        }
+
+        .nav-cta {
+            transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(105, 12, 37, 0.2);
+        }
+
+        .nav-menu-line {
+            transform-origin: center;
+            transition: transform 240ms ease, opacity 200ms ease;
+        }
+
+        #mobile-menu-toggle.is-open .nav-menu-line:first-child {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        #mobile-menu-toggle.is-open .nav-menu-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        #mobile-menu-toggle.is-open .nav-menu-line:last-child {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+        :where(header a, header button):focus-visible {
+            outline-color: #690C25;
+        }
+
+        section[id] {
+            scroll-margin-top: 96px;
+        }
+
+        /* Animações de Scroll (Intersection Observer) */
+        .reveal {
+            opacity: 0;
+            transform: translate3d(0, 24px, 0) scale(0.985);
+            transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: var(--reveal-delay, 0ms);
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+
+        /* Destaque do título do Hero */
+        .hero-accent {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-accent::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -0.06em;
+            height: 1px;
+            background: #630B1D;
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1) 480ms;
+        }
+
+        h1.active .hero-accent::after {
+            transform: scaleX(1);
+        }
+
+        /* Microinterações em cards e links */
+        main .hover-lift {
+            transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
+        }
+
+        main .hover-lift:hover {
+            transform: translate3d(0, -3px, 0);
+            box-shadow: 0 14px 32px rgba(9, 9, 11, 0.07);
+        }
+
+        main a[href^="https://wa.me"]:active,
+        main a[href="#processo"]:active,
+        footer a[href^="#"]:active {
+            transform: scale(0.985);
+        }
+
+        footer ul a {
+            display: inline-block;
+            transition: transform 220ms ease;
+        }
+
+        footer ul a:hover {
+            transform: translate3d(2px, 0, 0);
+        }
+
+        .accordion-item button:hover .accordion-icon {
+            color: #630B1D;
+        }
+
+        /* Acordeão suave para Capacidades */
+        .accordion-content {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 340ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .accordion-item.is-open .accordion-content {
+            grid-template-rows: 1fr;
+        }
+
+        .accordion-inner {
+            overflow: hidden;
+        }
+
+        .accordion-icon {
+            transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1), color 260ms ease;
+        }
+
+        .accordion-item.is-open .accordion-icon {
+            transform: rotate(45deg);
+            color: #630B1D;
+        }
+
+        .accordion-item.is-open .service-index {
+            color: #630B1D;
+            font-weight: 500;
+        }
+
+        /* Flutuação sutil dos cards do Hero (com parallax por variável) */
+        @keyframes floatSlow {
+            0%, 100% { transform: translate3d(0, var(--parallax-y, 0px), 0); }
+            50% { transform: translate3d(0, calc(var(--parallax-y, 0px) - 6px), 0); }
+        }
+
+        @keyframes floatDelayed {
+            0%, 100% { transform: translate3d(0, var(--parallax-y, 0px), 0); }
+            50% { transform: translate3d(0, calc(var(--parallax-y, 0px) - 9px), 0); }
+        }
+
+        .animate-float-1 {
+            animation: floatSlow 6.5s ease-in-out infinite;
+        }
+
+        .animate-float-2 {
+            animation: floatDelayed 7.8s ease-in-out infinite 1.1s;
+        }
+
+        @media (max-width: 640px) {
+            .animate-float-1, .animate-float-2 { animation: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            .animate-float-1, .animate-float-2, .nav-pill { animation: none; }
+            .hero-accent::after { transform: scaleX(1); transition: none; }
+            main .hover-lift, main .hover-lift:hover { transform: none; transition: none; }
+            footer ul a, footer ul a:hover { transform: none; transition: none; }
+            .accordion-content { transition: none; }
+            .modal-backdrop, .modal-panel { transition: none; }
+        }
+
+        .modal-backdrop {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 220ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-backdrop.is-open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-panel {
+            transform: translateY(12px) scale(0.985);
+            transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .modal-backdrop.is-open .modal-panel {
+            transform: translateY(0) scale(1);
+        }
+    </style>
+</head>
+<body class="bg-white text-ink">
+
+    <!-- ===================================================================== -->
+    <!-- 01. NAVEGAÇÃO                                                         -->
+    <!-- ===================================================================== -->
+    <header class="fixed inset-x-0 top-4 z-50 px-3 sm:px-6">
+        <div class="nav-pill mx-auto flex w-fit max-w-full items-center justify-between gap-4 rounded-full border border-[#E5E5E5] bg-white py-2 pl-4 pr-3 shadow-[0_4px_16px_rgba(9,9,11,0.05)] sm:gap-6 sm:py-2.5 sm:pl-5 sm:pr-4 lg:gap-8 lg:px-6">
+            <!-- Logo oficial + nome da marca -->
+            <a href="#" class="group flex shrink-0 items-center gap-2.5 focus:outline-none lg:gap-3">
+                <img src="assets/apex-logo.png" alt="Apex Agency" width="714" height="515" class="h-7 w-auto shrink-0 sm:h-8 transition-transform duration-300 group-hover:scale-105" />
+                <span class="whitespace-nowrap text-[11px] font-bold uppercase tracking-[0.08em] text-ink lg:text-[13px]">APEX AGENCY</span>
+            </a>
+
+            <!-- Links Centrais -->
+            <nav class="hidden items-center gap-4 md:flex lg:gap-8" aria-label="Navegação principal">
+                <a href="#capacidades" class="nav-link relative whitespace-nowrap text-xs text-ink transition-colors lg:text-[13px] hover:text-[#690C25]">O que fazemos</a>
+                <a href="#solucoes" class="nav-link relative whitespace-nowrap text-xs text-ink transition-colors lg:text-[13px] hover:text-[#690C25]">Soluções</a>
+                <a href="#processo" class="nav-link relative whitespace-nowrap text-xs text-ink transition-colors lg:text-[13px] hover:text-[#690C25]">Como trabalhamos</a>
+                <a href="#manifesto" class="nav-link relative whitespace-nowrap text-xs text-ink transition-colors lg:text-[13px] hover:text-[#690C25]">Apex</a>
+            </nav>
+
+            <!-- CTA Direita + Menu Mobile -->
+            <div class="flex shrink-0 items-center gap-2.5 lg:gap-3">
+                <a href="https://wa.me/5511993085089?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Apex%20Agency%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="nav-cta hidden items-center justify-center whitespace-nowrap rounded-full bg-[#690C25] px-4 py-2 text-xs font-semibold text-white hover:bg-[#5A0A21] sm:inline-flex sm:px-5 lg:text-[13px]">
+                    Iniciar projeto
+                </a>
+                <button type="button" id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#E5E5E5] text-ink transition-colors hover:bg-surfaceAlt md:hidden" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path class="nav-menu-line" d="M4 6h16" stroke-linecap="round" />
+                        <path class="nav-menu-line" d="M4 12h16" stroke-linecap="round" />
+                        <path class="nav-menu-line" d="M4 18h16" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Expansível -->
+        <div id="mobile-menu" class="mx-auto mt-2 hidden w-fit max-w-full rounded-3xl border border-[#E5E5E5] bg-white px-4 py-3 shadow-[0_10px_30px_rgba(9,9,11,0.07)] sm:px-5 sm:py-4 md:hidden" aria-label="Menu mobile">
+            <nav class="flex flex-col gap-1" aria-label="Navegação mobile">
+                <a href="#capacidades" onclick="toggleMobileMenu()" class="rounded-xl px-3 py-2.5 text-sm text-ink transition-colors hover:bg-surfaceAlt hover:text-[#690C25]">O que fazemos</a>
+                <a href="#solucoes" onclick="toggleMobileMenu()" class="rounded-xl px-3 py-2.5 text-sm text-ink transition-colors hover:bg-surfaceAlt hover:text-[#690C25]">Soluções</a>
+                <a href="#processo" onclick="toggleMobileMenu()" class="rounded-xl px-3 py-2.5 text-sm text-ink transition-colors hover:bg-surfaceAlt hover:text-[#690C25]">Como trabalhamos</a>
+                <a href="#manifesto" onclick="toggleMobileMenu()" class="rounded-xl px-3 py-2.5 text-sm text-ink transition-colors hover:bg-surfaceAlt hover:text-[#690C25]">Apex</a>
+            </nav>
+            <a href="https://wa.me/5511993085089?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Apex%20Agency%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o." onclick="toggleMobileMenu()" target="_blank" rel="noopener noreferrer" class="mt-3 flex items-center justify-center whitespace-nowrap rounded-full bg-[#690C25] px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-[#5A0A21]">
+                Iniciar projeto
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================================================================== -->
+        <!-- 02. HERO                                                              -->
+        <!-- ===================================================================== -->
+        <section class="pt-20 pb-24 sm:pt-28 sm:pb-28 border-b border-border overflow-hidden bg-white">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                
+                <!-- Badge Superior Limpa (Zero emojis, zero bolinha verde) -->
+                <div class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-bordeaux-soft border border-bordeaux-border text-xs font-medium text-bordeaux tracking-wide mb-8 reveal">
+                    <span>Estratégia · Criatividade · Tecnologia</span>
+                </div>
+
+                <!-- Headline Principal -->
+                <h1 class="text-4xl sm:text-6xl lg:text-[64px] font-semibold tracking-display text-ink max-w-4xl mx-auto leading-[1.08] reveal delay-100">
+                    Construímos marcas e experiências digitais <span class="text-bordeaux hero-accent">que impulsionam negócios.</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="mt-6 text-base sm:text-xl text-muted font-normal max-w-3xl mx-auto leading-relaxed reveal delay-200">
+                    Unimos estratégia de marca, desenvolvimento digital, inteligência artificial e marketing para transformar ideias em soluções concretas, experiências relevantes e operações preparadas para crescer.
+                </p>
+
+                <!-- CTAs Duplos -->
+                <div class="mt-10 flex flex-wrap items-center justify-center gap-3.5 reveal delay-300">
+                    <a href="https://wa.me/5511993085089?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Apex%20Agency%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-lg bg-bordeaux text-white text-sm font-medium px-6 py-3.5 hover:bg-bordeaux-dark transition-all duration-200 shadow-xs">
+                        Quero vender mais
+                    </a>
+                    <a href="#processo" class="inline-flex items-center justify-center rounded-lg bg-white text-ink border border-border text-sm font-medium px-6 py-3.5 hover:bg-surfaceAlt hover:border-zinc-300 transition-all duration-200">
+                        Entender como funciona
+                    </a>
+                </div>
+
+                <!-- Composição Visual Centralizada: Hub Logo Bordeaux "A" + Cards Flutuantes -->
+                <div class="mt-20 relative max-w-4xl mx-auto h-[320px] sm:h-[380px] reveal delay-300">
+                    <!-- Plano arquitetônico sutil -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/70 to-surfaceAlt/90 rounded-3xl border border-border/80 pointer-events-none"></div>
+
+                    <!-- Linhas conectoras sutis -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none hidden sm:block" viewBox="0 0 896 380" fill="none" aria-hidden="true">
+                        <path d="M225 90 L448 190" stroke="#E4E4E7" stroke-width="1" stroke-dasharray="3 3" />
+                        <path d="M671 95 L448 190" stroke="#E4E4E7" stroke-width="1" stroke-dasharray="3 3" />
+                        <path d="M235 295 L448 190" stroke="#E4E4E7" stroke-width="1" stroke-dasharray="3 3" />
+                        <path d="M661 292 L448 190" stroke="#E4E4E7" stroke-width="1" stroke-dasharray="3 3" />
+                    </svg>
+
+                    <!-- Hub Central Branco Elevado com Logo Bordeaux "A" -->
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl bg-white border border-border shadow-[0_20px_50px_rgba(99,11,29,0.10)] flex flex-col items-center justify-center p-4">
+                            <img src="assets/apex-logo.png" alt="Emblema Apex Agency" width="714" height="515" class="w-16 sm:w-20 h-auto shrink-0" />
+                        </div>
+                    </div>
+
+                    <!-- Card Flutuante 01: Branding & Identidade -->
+                    <div data-parallax="0.025" class="parallax-card absolute top-6 left-3 sm:left-8 w-56 sm:w-64 bg-white rounded-xl border border-border p-4 shadow-[0_8px_30px_rgb(0,0,0,0.035)] text-left animate-float-1 z-10 hidden sm:block">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono text-subtle">01 / MARCA</span>
+                            <div class="flex gap-1">
+                                <span class="w-2 h-2 rounded-full bg-bordeaux"></span>
+                                <span class="w-2 h-2 rounded-full bg-ink"></span>
+                                <span class="w-2 h-2 rounded-full bg-zinc-300"></span>
+                            </div>
+                        </div>
+                        <p class="text-xs font-semibold text-ink">Branding &amp; Identidade</p>
+                        <p class="text-xs text-muted mt-1">Posicionamento e sistemas visuais</p>
+                    </div>
+
+                    <!-- Card Flutuante 02: Experiências Digitais -->
+                    <div data-parallax="-0.025" class="parallax-card absolute top-7 right-3 sm:right-8 w-56 sm:w-64 bg-white rounded-xl border border-border p-4 shadow-[0_8px_30px_rgb(0,0,0,0.035)] text-left animate-float-2 z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono text-subtle">02 / WEB</span>
+                            <span class="text-xs font-medium text-bordeaux bg-bordeaux-soft px-2 py-0.5 rounded">Conversão</span>
+                        </div>
+                        <p class="text-xs font-semibold text-ink">Experiências Digitais</p>
+                        <div class="mt-2.5 space-y-1.5">
+                            <div class="h-1.5 bg-surfaceAlt rounded-full w-full"></div>
+                            <div class="h-1.5 bg-bordeaux/20 rounded-full w-3/4"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Flutuante 03: IA & Automação -->
+                    <div data-parallax="-0.02" class="parallax-card absolute bottom-6 left-4 sm:left-12 w-56 sm:w-60 bg-white rounded-xl border border-border p-4 shadow-[0_8px_30px_rgb(0,0,0,0.035)] text-left animate-float-2 z-10">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono text-subtle">03 / IA</span>
+                            <span class="text-xs font-mono text-muted bg-surfaceAlt px-2 py-0.5 rounded">Operação</span>
+                        </div>
+                        <p class="text-xs font-semibold text-ink">IA &amp; Automação</p>
+                        <div class="mt-2.5 flex items-center gap-2">
+                            <div class="w-5 h-5 rounded-md bg-bordeaux text-white flex items-center justify-center text-[9px] font-mono">AI</div>
+                            <div class="h-1.5 bg-surfaceAlt rounded-full flex-1"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Flutuante 04: Performance & Escala -->
+                    <div data-parallax="0.02" class="parallax-card absolute bottom-5 right-4 sm:right-12 w-56 sm:w-64 bg-white rounded-xl border border-border p-4 shadow-[0_8px_30px_rgb(0,0,0,0.035)] text-left animate-float-1 z-10 hidden sm:block">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono text-subtle">04 / ESCALA</span>
+                            <span class="text-xs font-medium text-bordeaux bg-bordeaux-soft px-2 py-0.5 rounded">Dados</span>
+                        </div>
+                        <p class="text-xs font-semibold text-ink">Performance &amp; Escala</p>
+                        <div class="mt-2.5 flex items-end gap-1.5 h-4">
+                            <div class="w-2 bg-surfaceAlt h-2 rounded-t"></div>
+                            <div class="w-2 bg-surfaceAlt h-3 rounded-t"></div>
+                            <div class="w-2 bg-bordeaux/45 h-2.5 rounded-t"></div>
+                            <div class="w-2 bg-bordeaux h-4 rounded-t"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 03. POSICIONAMENTO (#solucoes)                                        -->
+        <!-- ===================================================================== -->
+        <section id="solucoes" class="py-24 sm:py-32 border-b border-border bg-surface">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-16 reveal">
+                    <div class="lg:col-span-6">
+                        <span class="font-mono text-xs text-bordeaux uppercase tracking-wider block mb-3">Nossa visão</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold tracking-heading text-ink leading-tight">
+                            O digital precisa funcionar. A sua marca precisa significar.
+                        </h2>
+                    </div>
+                    <div class="lg:col-span-6 space-y-4 text-base text-muted leading-relaxed lg:pt-7">
+                        <p>
+                            Uma presença digital não se constrói apenas com estética. Ela exige estratégia, consistência e execução.
+                        </p>
+                        <p>
+                            Desenvolvemos soluções integradas que conectam posicionamento, comunicação, tecnologia e aquisição. Cada elemento tem um propósito: fortalecer marcas, criar oportunidades e gerar valor para os negócios.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Grid 2x2 de Pilares Numerados -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Pilar 01 -->
+                    <div class="bg-white rounded-2xl border border-border p-8 hover:border-bordeaux/40 transition-colors duration-300 hover-lift reveal">
+                        <span class="font-mono text-xs text-bordeaux block mb-4">01 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Marcas com identidade</h3>
+                        <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                            Construímos posicionamentos e sistemas visuais que traduzem a essência de cada negócio e criam reconhecimento em todos os pontos de contato.
+                        </p>
+                    </div>
+
+                    <!-- Pilar 02 -->
+                    <div class="bg-white rounded-2xl border border-border p-8 hover:border-bordeaux/40 transition-colors duration-300 hover-lift reveal delay-100">
+                        <span class="font-mono text-xs text-bordeaux block mb-4">02 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Experiências que convertem</h3>
+                        <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                            Desenvolvemos websites e experiências digitais com arquitetura estratégica, navegação intuitiva e foco na jornada do usuário.
+                        </p>
+                    </div>
+
+                    <!-- Pilar 03 -->
+                    <div class="bg-white rounded-2xl border border-border p-8 hover:border-bordeaux/40 transition-colors duration-300 hover-lift reveal delay-200">
+                        <span class="font-mono text-xs text-bordeaux block mb-4">03 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Comunicação que movimenta</h3>
+                        <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                            Criamos conceitos, campanhas e conteúdos que combinam direção criativa, narrativa e estratégia para conquistar atenção e fortalecer marcas.
+                        </p>
+                    </div>
+
+                    <!-- Pilar 04 -->
+                    <div class="bg-white rounded-2xl border border-border p-8 hover:border-bordeaux/40 transition-colors duration-300 hover-lift reveal delay-300">
+                        <span class="font-mono text-xs text-bordeaux block mb-4">04 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Tecnologia que transforma</h3>
+                        <p class="mt-3 text-sm sm:text-base text-muted leading-relaxed">
+                            Aplicamos inteligência artificial e automação para estruturar processos, melhorar o atendimento e ampliar a capacidade operacional das empresas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 04. CAPACIDADES (#capacidades)                                        -->
+        <!-- ===================================================================== -->
+        <section id="capacidades" class="py-24 sm:py-32 border-b border-border bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    <!-- Coluna Esquerda Fixa -->
+                    <div class="lg:col-span-5 reveal">
+                        <span class="font-mono text-xs text-bordeaux uppercase tracking-wider block mb-3">O que fazemos</span>
+                        <h2 class="text-3xl sm:text-4xl font-semibold tracking-heading text-ink leading-tight">
+                            Estratégia para pensar. Tecnologia para construir. Criatividade para diferenciar.
+                        </h2>
+                        <p class="mt-4 text-base text-muted leading-relaxed">
+                            Atuamos em diferentes frentes, conectando competências para desenvolver soluções alinhadas aos objetivos e às necessidades de cada negócio.
+                        </p>
+                        <p class="mt-6 text-sm text-muted leading-relaxed border-l-2 border-bordeaux pl-4">
+                            Cada serviço é desenhado a partir do contexto da marca. Nada é genérico, nada é repetido. O resultado é uma operação mais clara, mais consistente e preparada para crescer.
+                        </p>
+                    </div>
+
+                    <!-- Coluna Direita: Lista Editorial Expansível com as 6 Capacidades -->
+                    <div class="lg:col-span-7 divide-y divide-border border-y border-border reveal" id="capabilities-accordion">
+                        
+                        <!-- 01 — Branding & Posicionamento -->
+                        <div class="accordion-item is-open">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">01 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Branding &amp; Posicionamento</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Construção de marcas com identidade, clareza e diferenciação.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Estratégia e posicionamento de marca</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Identidade visual</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Direção de arte</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Sistemas de identidade</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Linguagem e comunicação visual</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 02 — Websites & Experiências Digitais -->
+                        <div class="accordion-item">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">02 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Websites &amp; Experiências Digitais</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Experiências digitais projetadas para comunicar valor e transformar visitas em oportunidades.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Websites institucionais</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Landing pages</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Design de interfaces</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Desenvolvimento web</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Otimização de experiência e desempenho</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 03 — Criatividade & Conteúdo -->
+                        <div class="accordion-item">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">03 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Criatividade &amp; Conteúdo</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Comunicação visual e audiovisual desenvolvida para fortalecer marcas e conquistar atenção.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Direção criativa</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Criativos publicitários</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Design para redes sociais</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Vídeos e conteúdos digitais</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Campanhas visuais</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 04 — Marketing & Performance -->
+                        <div class="accordion-item">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">04 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Marketing &amp; Performance</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Estratégias de aquisição e comunicação orientadas por dados e objetivos comerciais.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Planejamento de marketing</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Gestão de tráfego pago</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Estratégia de campanhas</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Otimização de anúncios</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Análise de desempenho</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 05 — Inteligência Artificial & Automação -->
+                        <div class="accordion-item">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">05 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Inteligência Artificial &amp; Automação</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Tecnologia aplicada para simplificar processos e ampliar a eficiência das operações.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Agentes de inteligência artificial</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Atendimento automatizado</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Automações com WhatsApp</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Integrações com CRM</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Fluxos operacionais inteligentes</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 06 — Produtos & Sistemas Digitais -->
+                        <div class="accordion-item">
+                            <button type="button" onclick="toggleCapability(this)" class="w-full py-6 flex items-center justify-between text-left group focus:outline-none">
+                                <div class="flex items-baseline gap-4">
+                                    <span class="service-index font-mono text-xs text-subtle transition-colors">06 —</span>
+                                    <span class="text-lg sm:text-xl font-medium text-ink group-hover:text-bordeaux transition-colors">Produtos &amp; Sistemas Digitais</span>
+                                </div>
+                                <span class="accordion-icon text-subtle text-xl font-light leading-none select-none">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="accordion-inner">
+                                    <div class="pb-7 pl-9 pr-4 space-y-4">
+                                        <p class="text-sm sm:text-base text-muted leading-relaxed">
+                                            Desenvolvimento de soluções digitais para necessidades específicas de cada operação.
+                                        </p>
+                                        <div>
+                                            <span class="font-mono text-xs uppercase tracking-wider text-subtle block mb-2.5">Entregáveis</span>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-ink">
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Aplicações web</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Plataformas digitais</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Sistemas personalizados</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Interfaces e protótipos</li>
+                                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bordeaux shrink-0"></span>Estruturação de produtos digitais</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 05. PROJETOS (APLICAÇÃO NA PRÁTICA — SEM PROJETOS EXTERNOS)           -->
+        <!-- ===================================================================== -->
+        <section id="projetos" class="py-20 sm:py-24 border-b border-border bg-surface">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="rounded-3xl bg-white border border-border p-8 sm:p-14 flex flex-col lg:flex-row lg:items-center justify-between gap-8 reveal">
+                    <div class="max-w-2xl">
+                        <span class="font-mono text-xs text-bordeaux uppercase tracking-wider block mb-3">Aplicação na prática</span>
+                        <h2 class="text-3xl sm:text-5xl font-semibold tracking-display text-ink leading-[1.05]">
+                            Ideias ganham valor quando saem do papel.
+                        </h2>
+                        <p class="mt-6 text-base sm:text-lg text-muted leading-relaxed">
+                            Cada projeto representa uma combinação de estratégia, conceito e execução. Desenvolvemos soluções considerando o contexto, os objetivos e a identidade de cada negócio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 06. METODOLOGIA (#processo)                                           -->
+        <!-- ===================================================================== -->
+        <section id="processo" class="py-24 sm:py-32 border-b border-border bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-3xl mb-16 reveal">
+                    <span class="font-mono text-xs text-bordeaux uppercase tracking-wider block mb-3">Nosso processo</span>
+                    <h2 class="text-3xl sm:text-4xl font-semibold tracking-heading text-ink leading-tight">
+                        Da visão à execução. Da execução à evolução.
+                    </h2>
+                    <p class="mt-4 text-base text-muted leading-relaxed">
+                        Um processo estruturado para transformar necessidades em soluções funcionais, com clareza de escopo, direção estratégica e atenção a cada etapa.
+                    </p>
+                </div>
+
+                <!-- Grid Horizontal de 4 Etapas -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-10 border-t border-border">
+                    <div class="reveal">
+                        <span class="font-mono text-xs font-medium text-bordeaux block mb-4">01 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Descobrir</h3>
+                        <p class="mt-3 text-sm text-muted leading-relaxed">
+                            Entendemos o negócio, identificamos oportunidades e mapeamos os desafios que precisam ser resolvidos.
+                        </p>
+                    </div>
+
+                    <div class="reveal delay-100">
+                        <span class="font-mono text-xs font-medium text-bordeaux block mb-4">02 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Estratégia</h3>
+                        <p class="mt-3 text-sm text-muted leading-relaxed">
+                            Definimos o direcionamento, estruturamos o planejamento e estabelecemos as prioridades do projeto.
+                        </p>
+                    </div>
+
+                    <div class="reveal delay-200">
+                        <span class="font-mono text-xs font-medium text-bordeaux block mb-4">03 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Construir</h3>
+                        <p class="mt-3 text-sm text-muted leading-relaxed">
+                            Transformamos o planejamento em execução, desenvolvendo marcas, experiências, campanhas e soluções tecnológicas.
+                        </p>
+                    </div>
+
+                    <div class="reveal delay-300">
+                        <span class="font-mono text-xs font-medium text-bordeaux block mb-4">04 —</span>
+                        <h3 class="text-lg font-semibold text-ink">Evoluir</h3>
+                        <p class="mt-3 text-sm text-muted leading-relaxed">
+                            Analisamos o desempenho, identificamos melhorias e aprimoramos as soluções de acordo com as necessidades do negócio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 08. MANIFESTO (#manifesto)                                            -->
+        <!-- ===================================================================== -->
+        <section id="manifesto" class="py-24 sm:py-32 text-white relative overflow-hidden" style="background: linear-gradient(145deg, #4A0715 0%, #630B1D 55%, #3B0510 100%);">
+            <!-- Marca d'água arquitetônica sutil do "A" -->
+            <img src="assets/apex-logo-white.png" alt="" width="638" height="488" class="absolute -right-16 -bottom-16 w-[420px] h-auto opacity-[0.06] pointer-events-none select-none" aria-hidden="true" />
+
+            <div class="max-w-4xl mx-auto px-6 relative z-10 reveal">
+                <span class="font-mono text-xs text-rose-200/80 uppercase tracking-wider block mb-4">Nossa essência</span>
+                <h2 class="text-3xl sm:text-5xl font-semibold tracking-display text-white leading-[1.12]">
+                    O próximo nível não acontece por acaso.
+                </h2>
+
+                <div class="mt-8 space-y-6 text-base sm:text-lg text-rose-100/85 leading-relaxed">
+                    <p>
+                        Acreditamos que marcas relevantes são construídas com intenção. Que boas ideias precisam de estratégia para ganhar forma. Que tecnologia deve resolver problemas reais. E que criatividade não deve existir apenas para chamar atenção, mas para criar significado.
+                    </p>
+                    <p>
+                        Não acreditamos em fórmulas prontas, soluções superficiais ou promessas sem fundamento. Acreditamos em construir com propósito, executar com precisão e evoluir continuamente.
+                    </p>
+                    <p>
+                        Porque deixar uma marca exige mais do que estar presente. Exige fazer a diferença.
+                    </p>
+                </div>
+
+                <div class="mt-10 pt-8 border-t border-white/15 flex items-center justify-between">
+                    <span class="font-bold text-sm sm:text-base tracking-[0.14em] uppercase text-white">MAKE YOUR MARK.</span>
+                    <span class="font-mono text-xs text-rose-200/70">APEX AGENCY</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================== -->
+        <!-- 08. CTA FINAL                                                         -->
+        <!-- ===================================================================== -->
+        <section class="py-24 sm:py-32 bg-surface border-b border-border">
+            <div class="max-w-4xl mx-auto px-6 text-center reveal">
+                <span class="font-mono text-xs text-bordeaux uppercase tracking-wider block mb-3">Vamos começar?</span>
+                <h2 class="text-3xl sm:text-5xl font-semibold tracking-display text-ink leading-[1.1]">
+                    O próximo movimento da sua marca começa aqui.
+                </h2>
+                <p class="mt-6 text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+                    Conte-nos sobre o seu negócio, seus objetivos e o que deseja construir. Vamos identificar as oportunidades e transformar possibilidades em um projeto concreto.
+                </p>
+
+                <div class="mt-10 flex items-center justify-center">
+                    <a href="https://wa.me/5511993085089?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Apex%20Agency%20e%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o." target="_blank" rel="noopener noreferrer" class="inline-flex w-full sm:w-auto items-center justify-center rounded-lg bg-bordeaux text-white text-base sm:text-lg font-medium px-10 py-5 hover:bg-bordeaux-dark transition-colors duration-200 shadow-md">
+                        Falar com a Apex no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- 09. RODAPÉ                                                            -->
+    <!-- ===================================================================== -->
+    <footer class="bg-white pt-16 pb-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-border">
+                <!-- Coluna Marca -->
+                <div class="md:col-span-6 space-y-4 reveal">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/apex-logo.png" alt="Apex Agency" width="714" height="515" class="h-8 w-auto shrink-0" />
+                        <span class="font-bold text-sm tracking-[0.06em] uppercase text-ink">APEX AGENCY</span>
+                    </div>
+                    <p class="text-xs font-bold tracking-[0.14em] uppercase text-bordeaux">MAKE YOUR MARK.</p>
+                    <p class="text-sm text-muted">Estratégia · Criatividade · Tecnologia</p>
+                </div>
+
+                <!-- Coluna Navegação -->
+                <div class="md:col-span-3 space-y-3 reveal">
+                    <span class="font-mono text-xs uppercase tracking-wider text-ink font-medium block">Navegação</span>
+                    <ul class="space-y-2.5 text-sm text-muted">
+                        <li><a href="#capacidades" class="hover:text-bordeaux transition-colors">O que fazemos</a></li>
+                        <li><a href="#solucoes" class="hover:text-bordeaux transition-colors">Soluções</a></li>
+                        <li><a href="#processo" class="hover:text-bordeaux transition-colors">Como trabalhamos</a></li>
+                        <li><a href="#manifesto" class="hover:text-bordeaux transition-colors">Apex</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Contato -->
+                <div class="md:col-span-3 space-y-3 reveal">
+                    <span class="font-mono text-xs uppercase tracking-wider text-ink font-medium block">Contato</span>
+                    <ul class="space-y-2.5 text-sm text-muted">
+                        <li><button type="button" onclick="openContactModal('channels')" class="hover:text-bordeaux transition-colors">WhatsApp</button></li>
+                        <li><button type="button" onclick="openContactModal('channels')" class="hover:text-bordeaux transition-colors">E-mail</button></li>
+                        <li><button type="button" onclick="openContactModal('channels')" class="hover:text-bordeaux transition-colors">Instagram</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-subtle">
+                <p>© 2026 Apex Agency. Todos os direitos reservados.</p>
+                <p class="font-mono text-xs uppercase tracking-wider text-muted">MAKE YOUR MARK.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================== -->
+    <!-- MODAL LEVE DE INÍCIO DE PROJETO / CANAIS DE CONTATO                   -->
+    <!-- ===================================================================== -->
+    <div id="contact-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-xs p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-panel bg-white w-full max-w-md rounded-2xl border border-border p-6 sm:p-8 shadow-2xl relative">
+            <button type="button" onclick="closeContactModal()" class="absolute top-5 right-5 text-subtle hover:text-ink p-1.5 rounded-lg hover:bg-surfaceAlt transition-colors" aria-label="Fechar janela">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <!-- Abas discretas entre Iniciar Projeto e Canais Diretos -->
+            <div class="flex items-center gap-2 mb-6 border-b border-border pb-3">
+                <button type="button" id="tab-project" onclick="switchModalTab('project')" class="text-xs font-medium px-3 py-1.5 rounded-md transition-colors">
+                    Iniciar projeto
+                </button>
+                <button type="button" id="tab-channels" onclick="switchModalTab('channels')" class="text-xs font-medium px-3 py-1.5 rounded-md transition-colors">
+                    Canais diretos
+                </button>
+            </div>
+
+            <!-- Conteúdo 1: Formulário Rápido de Projeto -->
+            <div id="modal-project-view">
+                <h3 id="modal-title" class="text-xl font-semibold text-ink">Iniciar um projeto</h3>
+                <p class="mt-1.5 text-sm text-muted leading-relaxed">
+                    Conte-nos brevemente sobre o seu negócio e o que deseja construir.
+                </p>
+
+                <form onsubmit="handleProjectSubmit(event)" class="mt-5 space-y-4">
+                    <div>
+                        <label for="lead-name" class="block text-xs font-medium text-ink mb-1.5">Nome</label>
+                        <input id="lead-name" type="text" required placeholder="Seu nome" class="w-full rounded-lg border border-border bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-zinc-400 focus:border-bordeaux focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="lead-company" class="block text-xs font-medium text-ink mb-1.5">Empresa ou marca</label>
+                        <input id="lead-company" type="text" required placeholder="Nome da empresa" class="w-full rounded-lg border border-border bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-zinc-400 focus:border-bordeaux focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="lead-capability" class="block text-xs font-medium text-ink mb-1.5">Frente de interesse</label>
+                        <select id="lead-capability" class="w-full rounded-lg border border-border bg-white px-3.5 py-2.5 text-sm text-ink focus:border-bordeaux focus:outline-none transition-colors">
+                            <option value="Branding & Posicionamento">Branding &amp; Posicionamento</option>
+                            <option value="Websites & Experiências Digitais">Websites &amp; Experiências Digitais</option>
+                            <option value="Criatividade & Conteúdo">Criatividade &amp; Conteúdo</option>
+                            <option value="Marketing & Performance">Marketing &amp; Performance</option>
+                            <option value="Inteligência Artificial & Automação">Inteligência Artificial &amp; Automação</option>
+                            <option value="Produtos & Sistemas Digitais">Produtos &amp; Sistemas Digitais</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="lead-contact" class="block text-xs font-medium text-ink mb-1.5">WhatsApp ou E-mail</label>
+                        <input id="lead-contact" type="text" required placeholder="(11) 99999-9999 ou voce@empresa.com" class="w-full rounded-lg border border-border bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-zinc-400 focus:border-bordeaux focus:outline-none transition-colors">
+                    </div>
+
+                    <div class="pt-1">
+                        <button type="submit" class="w-full rounded-lg bg-bordeaux text-white text-sm font-medium py-3 hover:bg-bordeaux-dark transition-colors shadow-xs">
+                            Enviar solicitação
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Conteúdo 2: Canais Diretos (WhatsApp, E-mail, Instagram) -->
+            <div id="modal-channels-view" class="hidden space-y-4">
+                <h3 class="text-xl font-semibold text-ink">Falar com a Apex</h3>
+                <p class="text-sm text-muted leading-relaxed">
+                    Escolha o canal de sua preferência para iniciar uma conversa com nossa equipe.
+                </p>
+
+                <div class="space-y-2.5 pt-2">
+                    <div class="flex items-center justify-between p-3.5 rounded-xl border border-border bg-surface hover:border-bordeaux/40 transition-colors hover-lift">
+                        <div>
+                            <p class="text-xs font-mono text-bordeaux uppercase">WhatsApp</p>
+                            <p class="text-sm font-medium text-ink mt-0.5">Atendimento comercial direto</p>
+                        </div>
+                        <button type="button" onclick="switchModalTab('project')" class="text-xs font-medium text-bordeaux hover:underline">
+                            Solicitar contato
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-3.5 rounded-xl border border-border bg-surface hover:border-bordeaux/40 transition-colors hover-lift">
+                        <div>
+                            <p class="text-xs font-mono text-bordeaux uppercase">E-mail</p>
+                            <p id="apex-email-text" class="text-sm font-medium text-ink mt-0.5">contato@apexagency.com.br</p>
+                        </div>
+                        <button type="button" onclick="copyEmail()" id="copy-email-btn" class="text-xs font-medium text-ink bg-white border border-border px-2.5 py-1 rounded-md hover:bg-surfaceAlt transition-colors">
+                            Copiar
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-3.5 rounded-xl border border-border bg-surface hover:border-bordeaux/40 transition-colors hover-lift">
+                        <div>
+                            <p class="text-xs font-mono text-bordeaux uppercase">Instagram</p>
+                            <p class="text-sm font-medium text-ink mt-0.5">Apex Agency Oficial</p>
+                        </div>
+                        <span class="text-xs text-subtle">Em atualização</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmação de Envio -->
+            <div id="modal-success-view" class="hidden py-6 text-center">
+                <div class="w-11 h-11 rounded-xl bg-bordeaux-soft text-bordeaux border border-bordeaux-border mx-auto flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h4 class="text-lg font-semibold text-ink">Mensagem enviada</h4>
+                <p class="mt-2 text-sm text-muted leading-relaxed">
+                    Recebemos as informações do seu projeto. Nossa equipe retornará em breve.
+                </p>
+                <button type="button" onclick="closeContactModal()" class="mt-6 inline-flex items-center justify-center rounded-lg border border-border bg-white px-5 py-2.5 text-sm font-medium text-ink hover:bg-surfaceAlt transition-colors">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- SCRIPTS: ACORDEÃO, INTERSECTION OBSERVER E MODAL                      -->
+    <!-- ===================================================================== -->
+    <script>
+        // Menu Mobile
+        function toggleMobileMenu(force) {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-toggle');
+            const shouldOpen = typeof force === 'boolean' ? force : menu.classList.contains('hidden');
+
+            menu.classList.toggle('hidden', !shouldOpen);
+            button.classList.toggle('is-open', shouldOpen);
+            button.setAttribute('aria-expanded', String(shouldOpen));
+            button.setAttribute('aria-label', shouldOpen ? 'Fechar menu' : 'Abrir menu');
+        }
+
+        document.addEventListener('click', (event) => {
+            const menu = document.getElementById('mobile-menu');
+            const button = document.getElementById('mobile-menu-toggle');
+            if (!menu.classList.contains('hidden') && !menu.contains(event.target) && !button.contains(event.target)) {
+                toggleMobileMenu(false);
+            }
+        });
+
+        // Refino discreto da navbar durante o scroll
+        const siteHeader = document.querySelector('header');
+        const updateHeaderOnScroll = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 12);
+        updateHeaderOnScroll();
+        window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+
+        // Acordeão de Capacidades
+        function toggleCapability(button) {
+            const currentItem = button.closest('.accordion-item');
+            const isOpen = currentItem.classList.contains('is-open');
+
+            document.querySelectorAll('#capabilities-accordion .accordion-item').forEach(item => {
+                item.classList.remove('is-open');
+            });
+
+            if (!isOpen) {
+                currentItem.classList.add('is-open');
+            }
+        }
+
+        // Modal de Contato / Projeto
+        const modal = document.getElementById('contact-modal');
+        const projectView = document.getElementById('modal-project-view');
+        const channelsView = document.getElementById('modal-channels-view');
+        const successView = document.getElementById('modal-success-view');
+        const tabProject = document.getElementById('tab-project');
+        const tabChannels = document.getElementById('tab-channels');
+
+        function switchModalTab(tab) {
+            successView.classList.add('hidden');
+            if (tab === 'channels') {
+                projectView.classList.add('hidden');
+                channelsView.classList.remove('hidden');
+                tabChannels.className = 'text-xs font-medium px-3 py-1.5 rounded-md bg-bordeaux text-white transition-colors';
+                tabProject.className = 'text-xs font-medium px-3 py-1.5 rounded-md text-muted hover:text-ink transition-colors';
+            } else {
+                channelsView.classList.add('hidden');
+                projectView.classList.remove('hidden');
+                tabProject.className = 'text-xs font-medium px-3 py-1.5 rounded-md bg-bordeaux text-white transition-colors';
+                tabChannels.className = 'text-xs font-medium px-3 py-1.5 rounded-md text-muted hover:text-ink transition-colors';
+            }
+        }
+
+        function openContactModal(initialTab = 'project') {
+            switchModalTab(initialTab);
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            modal.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        function handleProjectSubmit(event) {
+            event.preventDefault();
+            projectView.classList.add('hidden');
+            channelsView.classList.add('hidden');
+            successView.classList.remove('hidden');
+            event.target.reset();
+        }
+
+        function copyEmail() {
+            const emailText = document.getElementById('apex-email-text').innerText;
+            const tempInput = document.createElement('input');
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const btn = document.getElementById('copy-email-btn');
+            btn.innerText = 'Copiado';
+            setTimeout(() => {
+                btn.innerText = 'Copiar';
+            }, 2000);
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeContactModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (modal.classList.contains('is-open')) closeContactModal();
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) toggleMobileMenu(false);
+            }
+        });
+
+        // Animações de Scroll (Intersection Observer) & Parallax Sutil no Hero
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        entry.target.style.willChange = 'auto';
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -40px 0px',
+                threshold: 0.1
+            });
+
+            const revealByParent = new Map();
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (!/\bdelay-\d+\b/.test(el.className)) {
+                    const index = revealByParent.get(el.parentElement) || 0;
+                    el.style.setProperty('--reveal-delay', `${Math.min(index, 5) * 80}ms`);
+                    revealByParent.set(el.parentElement, index + 1);
+                }
+                observer.observe(el);
+            });
+
+            const parallaxCards = document.querySelectorAll('.parallax-card');
+            let ticking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        if (scrollY < 900) {
+                            parallaxCards.forEach(card => {
+                                const speed = parseFloat(card.getAttribute('data-parallax')) || 0;
+                                card.style.setProperty('--parallax-y', `${(scrollY * speed).toFixed(1)}px`);
+                            });
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>

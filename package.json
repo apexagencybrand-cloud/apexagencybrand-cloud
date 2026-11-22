@@ -1,0 +1,15 @@
+{
+  "name": "apex-agency-site",
+  "version": "1.0.0",
+  "description": "Site institucional da Apex Agency",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "private": true,
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  }
+}
